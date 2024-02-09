@@ -1,5 +1,6 @@
-import {exapp} from "./app"
 
-exapp.post('/', (req, res) => {
-    res.send('Hello World!')
-})
+
+
+export function ProcessReq(req) {
+    return "request processed"
+}
