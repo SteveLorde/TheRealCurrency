@@ -1,5 +1,5 @@
 import express from "express"
-import {ProcessReq} from "./Controller.js";
+import Controller from "./controllers/Controller.js";
 
 export const exapp = express();
 
@@ -9,13 +9,10 @@ exapp.get('/', (req, res) => {
     res.send('Hello World!')
 })
 
-exapp.get("/test", (req,res) => {
-    let proc = ProcessReq(req)
-    res.send(proc)
-})
+exapp.use("/controller", Controller)
 
 exapp.listen(port, () => {
     console.log(`Example app listening on port ${port}`)
 })
 
-module.exports = exapps;
+export default exapp
