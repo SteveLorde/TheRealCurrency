@@ -14,8 +14,8 @@ exapp.get("/test", (req,res) => {
     res.send(proc)
 })
 
-
-
 exapp.listen(port, () => {
     console.log(`Example app listening on port ${port}`)
 })
+
+module.exports = exapps;
