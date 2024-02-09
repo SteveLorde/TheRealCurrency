@@ -1,8 +1,11 @@
 import express from "express"
 import Controller from "./controllers/Controller.js";
+import 'dotenv/config'
 import env from "../environment.env"
 
 export const exapp = express();
+
+let token = process.env.TOKEN
 
 const port = 3000
 
