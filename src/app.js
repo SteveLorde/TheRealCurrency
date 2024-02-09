@@ -1,5 +1,6 @@
 import express from "express"
 import Controller from "./controllers/Controller.js";
+import env from "../environment.env"
 
 export const exapp = express();
 
